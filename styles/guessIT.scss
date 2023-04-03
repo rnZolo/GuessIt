@@ -274,6 +274,7 @@ footer{
                 min-height: 200px;
                 object-fit: contain;
                 position: relative;
+  
             }
 
         &:nth-child(2) {
@@ -320,5 +321,9 @@ footer{
             max-height: 200px;
             max-width: 200px;
         }
+    }
+    .box-con .box-box img{
+        left: -9%;
+        // transform: translateX(-50%);
     }
 }

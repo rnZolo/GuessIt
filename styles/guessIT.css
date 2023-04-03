@@ -123,6 +123,7 @@ footer {
 .tab {
   width: 10vw;
   max-width: 80px;
+  min-width: 65px;
   height: 60vh;
   max-height: 450px;
   position: fixed;
@@ -468,5 +469,8 @@ input::placeholder {
   .hero img {
     max-height: 200px;
     max-width: 200px;
+  }
+  .box-con .box-box img {
+    left: -9%;
   }
 }/*# sourceMappingURL=guessIT.css.map */
