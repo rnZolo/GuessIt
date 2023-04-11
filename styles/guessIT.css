@@ -32,6 +32,8 @@ body::-webkit-scrollbar {
   background: radial-gradient(circle, rgb(66, 58, 203) 0%, rgb(11, 23, 120) 0%, rgb(17, 22, 68) 100%);
   position: relative;
   overflow-y: hidden;
+  width: 100vw;
+  min-height: 740px;
 }
 #root img {
   -webkit-user-select: none; /* Safari */
@@ -45,6 +47,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-wrap: wrap;
   align-items: self-end;
+  min-height: 600px;
 }
 
 .cover {
@@ -75,6 +78,7 @@ body::-webkit-scrollbar {
 .half-fr:nth-child(2) {
   display: flex;
   justify-content: start;
+  min-height: 370px;
 }
 
 .flex-col {
@@ -135,6 +139,7 @@ footer {
   border: 3px ridge var(--green);
   overflow: hidden;
   z-index: 1000;
+  min-height: 450px;
 }
 .tab .tag {
   padding: 10px;
@@ -201,7 +206,7 @@ footer {
   min-width: 350px;
   min-height: 480px;
   position: relative;
-  transform: translateY(-10%);
+  transform: translateY(-17%);
   filter: drop-shadow(-2px -1px 14px black);
 }
 
@@ -377,9 +382,10 @@ input::placeholder {
 @media only screen and (max-width: 888px) {
   .tab {
     height: 50vh;
-    position: fixed;
+    position: absolute;
     left: 10px;
-    top: 25%;
+    top: 50%;
+    transform: translateY(-40%);
   }
   .half-fr {
     height: 100%;
@@ -403,8 +409,8 @@ input::placeholder {
     height: 80%;
   }
   .hero {
-    height: 50vh;
     width: 100%;
+    height: 100%;
     justify-content: center;
   }
   .hero .hero-bg, .hero .hero-con {
@@ -463,14 +469,5 @@ input::placeholder {
     width: 100%;
     height: 100%;
     text-align: center;
-  }
-}
-@media only screen and (max-width: 470px) {
-  .hero img {
-    max-height: 200px;
-    max-width: 200px;
-  }
-  .box-con .box-box img {
-    left: -9%;
   }
 }/*# sourceMappingURL=guessIT.css.map */
