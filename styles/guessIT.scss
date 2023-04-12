@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
-:root{
+:root {
     --base-font: 16px;
     --small-font: 13px;
     --large-font: 28px;
@@ -11,42 +11,47 @@
     --footer: #06081B;
 
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
+
+body {
     scroll-behavior: smooth;
-  
+
     &::-webkit-scrollbar {
         display: none;
     }
 }
 
-#root{
-        width: 100%;
-        height: 100vh;
-        font-size: var(--base-font);
-        background: rgb(66, 58, 203);
-        background: radial-gradient(circle, rgb(66, 58, 203) 0%, rgb(11 23 120) 0%, rgb(17 22 68) 100%);
-        position: relative;
-        overflow-y: hidden;
-        width: 100vw;
-        min-height: 740px;
+#root {
+    width: 100%;
+    height: 100vh;
+    font-size: var(--base-font);
+    background: rgb(66, 58, 203);
+    background: radial-gradient(circle, rgb(66, 58, 203) 0%, rgb(11 23 120) 0%, rgb(17 22 68) 100%);
+    position: relative;
+    overflow-y: hidden;
+    width: 100vw;
+    min-height: 740px;
 
 
-        & img {
-            -webkit-user-select: none; /* Safari */
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
-        }
+    & img {
+        -webkit-user-select: none;
+        /* Safari */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
     }
+}
 
 // App Containers
-.inter-wrapper{
+.inter-wrapper {
     width: 100%;
     height: 80%;
     display: flex;
@@ -54,7 +59,8 @@ body{
     align-items: self-end;
     min-height: 600px;
 }
-.cover{
+
+.cover {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -63,12 +69,14 @@ body{
     background-clip: border-box;
     filter: saturate(0.8);
 }
-.flex-row{
+
+.flex-row {
     width: 100%;
     height: 10vh;
 
 }
-.half-fr{
+
+.half-fr {
     width: 50%;
     height: 50%;
     height: inherit;
@@ -77,52 +85,61 @@ body{
     z-index: 1;
     min-height: 50vh;
 }
-.half-fr:nth-child(2){
+
+.half-fr:nth-child(2) {
     display: flex;
     justify-content: start;
     min-height: 370px;
 }
-.flex-col{
+
+.flex-col {
     display: flex;
     flex-flow: column nowrap;
     // background-color:blueviolet;
 }
-.grid-cent{
+
+.grid-cent {
     width: 100%;
     display: grid;
     place-items: center;
     height: 10vh;
 }
-.pos-fx{
+
+.pos-fx {
     position: relative;
     width: 100%;
     height: 20%;
     z-index: 1;
 }
-.ftr-p{
+
+.ftr-p {
     letter-spacing: 2px;
     padding: 5px;
 }
-footer{
+
+footer {
     height: 9vh;
     max-height: 100px;
     background-color: var(--footer);
     color: var(--f-color);
     font-size: var(--small-font);
 }
+
 @import './playerAndBox';
 
 //  INPUTS
-    input[type="number"]{
+input[type="number"] {
 
-        &::-webkit-outer-spin-button,
-        &::-webkit-inner-spin-button{
-            display: none;
-        }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        display: none;
     }
-    input::placeholder{
-        font-size: 20px;
-    }
+}
+
+input::placeholder {
+    font-size: 20px;
+}
+
 .form-con {
     width: 150px;
     height: 150px;
@@ -130,8 +147,9 @@ footer{
     border-radius: 50%;
     padding: 10px;
     transform: translate(10px, -30px);
-}   
-.lab-wrapper{
+}
+
+.lab-wrapper {
     width: 100%;
     height: 100%;
     position: relative;
@@ -139,6 +157,7 @@ footer{
     justify-content: space-evenly;
 
 }
+
 .input-tag {
     position: absolute;
     padding: 0 10px;
@@ -150,7 +169,8 @@ footer{
     left: 20px;
     letter-spacing: 2px;
 }
-.input-fld{
+
+.input-fld {
     position: absolute;
     width: 90px;
     height: 90px;
@@ -166,13 +186,14 @@ footer{
     color: #f7ee09;
     transition: all 1s linear;
 
-    &:focus { 
-        outline-color: #f7ee09; 
+    &:focus {
+        outline-color: #f7ee09;
     }
 }
-.sub-btn{
+
+.sub-btn {
     position: absolute;
-    transform: translate( 70px, 30%);
+    transform: translate(70px, 30%);
     // border: 3px groove var(--dark-vio); 
     border: none;
     width: 50px;
@@ -182,16 +203,19 @@ footer{
     transition: all 1s linear;
     box-shadow: rgba(0, 0, 0, 1) 0px 3px 8px;
 }
-.sub-icon{
+
+.sub-icon {
     position: relative;
     width: 50%;
     height: 50%;
 }
+
 .hi-low {
     width: 40%;
     height: 100%;
     display: grid;
     place-items: center;
+
     // position: absolute;
     // right: -20px;
     // top: 0;
@@ -201,6 +225,7 @@ footer{
 
     }
 }
+
 .reset {
     position: absolute;
     transform: translateY(18px);
@@ -216,7 +241,7 @@ footer{
 }
 
 
-@media only screen and (max-width: 888px){
+@media only screen and (max-width: 888px) {
     .tab {
         height: 50vh;
         position: absolute;
@@ -224,12 +249,13 @@ footer{
         top: 50%;
         transform: translateY(-40%);
     }
-    .half-fr{
+
+    .half-fr {
         height: 100%;
         width: 100%;
         position: relative;
 
-        &:nth-child(2){
+        &:nth-child(2) {
             width: 100%;
             height: 30%;
             display: flex;
@@ -239,19 +265,24 @@ footer{
             top: -22%;
         }
     }
-    .ten-fr{
+
+    .ten-fr {
         position: absolute;
     }
-    .inter-wrapper{
+
+    .inter-wrapper {
         flex-flow: column-reverse nowrap;
         height: 80%;
     }
-    .hero{
+
+    .hero {
 
         width: 100%;
-       height: 100%;
+        height: 100%;
         justify-content: center;
-        & &-bg, & &-con{
+
+        & &-bg,
+        & &-con {
             top: 10%;
 
             & img {
@@ -263,12 +294,13 @@ footer{
         }
 
     }
-    .box-con{
+
+    .box-con {
         width: 50%;
         height: 60%;
         position: relative;
 
-        & .box-box{
+        & .box-box {
             width: 100%;
             height: 100%;
             display: grid;
@@ -282,17 +314,18 @@ footer{
                 min-height: 200px;
                 object-fit: contain;
                 position: relative;
-  
+
             }
 
-        &:nth-child(2) {
-            position: absolute;
-            top:0;
-            left: 0;
+            &:nth-child(2) {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
         }
     }
-    }
-    .hero{
+
+    .hero {
         width: 100%;
     }
 
@@ -307,25 +340,14 @@ footer{
         font-size: clamp(0.575rem, -3.1731rem + 10.7692vw, 1.25rem);
         text-align: center;
         transition: all 1s linear;
-    
+
         & h1 {
-            display:grid;
+            display: grid;
             place-items: center;
             width: 100%;
             height: 100%;
             text-align: center;
 
         }
-    }
-}
-@media only screen and (max-width: 470px) {
-    .inter-wrapper{
- 
-    }
-    .half-fr:nth-child(2){
-       
-    }
-    #root{
-      
     }
 }

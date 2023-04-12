@@ -46,7 +46,7 @@ ftrContent = document.createElement('p')
 let appChilds = [curtain, bgQmark, interactWrapper, inputGrp]
 appendInside(appChilds, app)
 curtain.appendChild(curtainImg)
-curtainImg.src = '../src/curtain.png'
+curtainImg.src = './src/curtain.png'
 let interactWrapperChilds = [playerFr, boxFr]
 appendInside(interactWrapperChilds, interactWrapper)
 let playerFrChilds = [indicatorTab, guesserHero]
@@ -72,7 +72,7 @@ function createLp(){
         inputHiLow.appendChild(hiLowImg)
 
         rightAspan.style.display = 'none'
-        lpIcons.src = '../src/Hgreen.svg'
+        lpIcons.src = './src/Hgreen.svg'
         hiLowImg.style.display = 'none'
         addClass(lpCon, ['indi-con'])
         addClass(lpIcons, ['indi-icon'])
@@ -88,14 +88,14 @@ createLp()
     guessTag.textContent = 'Guessed'
 let guesserHeroChilds = [heroBgCon, heroCon]
 appendInside(guesserHeroChilds, guesserHero)
-    heroBgCon.appendChild(bgImg).src = '../src/bgbase.png'
-    heroCon.appendChild(heroImg).src = '../src/base.png'
+    heroBgCon.appendChild(bgImg).src = './src/bgbase.png'
+    heroCon.appendChild(heroImg).src = './src/base.png'
 boxFr.appendChild(boxSpot)
   boxSpot.appendChild(boxCon)
   boxSpot.appendChild(rightACon)
   rightACon.appendChild(rightAspan)
   rightAspan.appendChild(rightAns)
-    boxCon.appendChild(boxImg).src = '../src/box2.svg'
+    boxCon.appendChild(boxImg).src = './src/box2.svg'
    inputGrp.appendChild(inputForm)
    inputForm.appendChild(labWrapper)
 let labWrapperChilds = [inputLabel, inputfield, submit, resetButton]
@@ -117,8 +117,8 @@ footer.appendChild(ftrContent)
     inputfield.placeholder = '1 - 100'
     inputfield.disabled = false
     submit.type = 'submit'
-    submitIcon.src = '../src/lightbulb.svg'
-    resetIcon.src = '../src/replay.svg'
+    submitIcon.src = './src/lightbulb.svg'
+    resetIcon.src = './src/replay.svg'
     resetButton.style.display = 'none'
     ftrContent.textContent = `Renz Sagge 2023`
 
@@ -167,24 +167,24 @@ let randomNumber = Math.floor(Math.random() * 100) + 1; // generate random numbe
     // console.log(randomNumber)
 
 inputfield.addEventListener('focus', () =>{
-        heroImg.src = '../src/thinking.png'
+        heroImg.src = './src/thinking.png'
             setTimeout(() => {
-                heroImg.src = '../src/base.png'
+                heroImg.src = './src/base.png'
             },4000)
     }
 )
 
 submit.addEventListener('focus', () =>{ 
-    heroImg.src = '../src/guessing.png'
+    heroImg.src = './src/guessing.png'
     setTimeout(() => {
-        heroImg.src = '../src/base.png'
+        heroImg.src = './src/base.png'
     },4000)
 })
 
 submit.addEventListener('click', () =>{
-    heroImg.src = '../src/guessing.png'
+    heroImg.src = './src/guessing.png'
     setTimeout(() => {
-        heroImg.src = '../src/base.png'
+        heroImg.src = './src/base.png'
     },4000)
 })
 
@@ -194,29 +194,29 @@ function validate() {
     //if guess is wrong pop the last heart and replace with the guess.value
     lpHiLowArr[lpHiLowArr.length - guessCount].style.display = 'block'
     if (guess !== randomNumber){ 
-        bgImg.src = '../src/bgwrong.png'
-        lpArr[lpArr.length - guessCount].src = '../src/guessedNo.png'
+        bgImg.src = './src/bgwrong.png'
+        lpArr[lpArr.length - guessCount].src = './src/guessedNo.png'
         lpSpanArr[lpSpanArr.length - guessCount].textContent = guess
         setTimeout(() => {
-            bgImg.src = '../src/bgbase.png'
+            bgImg.src = './src/bgbase.png'
         },2000)
         
         if (guess < randomNumber){ // set the input field depends on the user guess
-            lpHiLowArr[lpHiLowArr.length - guessCount].src = '../src/high.svg' 
+            lpHiLowArr[lpHiLowArr.length - guessCount].src = './src/high.svg' 
         }else if (guess > randomNumber){// set the input field depends on the user guess
-            lpHiLowArr[lpHiLowArr.length - guessCount].src = '../src/low.svg' 
+            lpHiLowArr[lpHiLowArr.length - guessCount].src = './src/low.svg' 
         } 
     }else{
-        bgImg.src = '../src/bgright.png'
+        bgImg.src = './src/bgright.png'
         lpHiLowArr[lpHiLowArr.length - guessCount].style.display = 'none'
     }
 
     if (guessCount === 7){
         if (guess !== randomNumber){
             //   lpArr[lpArr.length - guessCount] = '../src/Hred.svg'
-            lpArr[0].src = '../src/Hred.svg'
-            lpArr[1].src = '../src/Hred.svg' 
-            lpArr[2].src = '../src/Hred.svg'
+            lpArr[0].src = './src/Hred.svg'
+            lpArr[1].src = './src/Hred.svg' 
+            lpArr[2].src = './src/Hred.svg'
             }
     }
 
@@ -225,11 +225,11 @@ function validate() {
         rightAns.textContent = randomNumber
         boxImg.style.display = 'none'
         if ( guessCount === 10){
-            bgImg.src = '../src/bgwrong.png'
+            bgImg.src = './src/bgwrong.png'
             gameOver() 
         }
         if( guess === randomNumber){
-            bgImg.src = '../src/bgright.png'
+            bgImg.src = './src/bgright.png'
             gameOver() 
         }
 
@@ -259,9 +259,9 @@ function resetGame() {
     boxImg.style.display = 'block'
     inputfield.style.display = 'block'
     submit.style.display = 'block'
-    bgImg.src = '../src/bgbase.png'
+    bgImg.src = './src/bgbase.png'
     lpArr.forEach((index) =>{
-        index.src = '../src/Hgreen.svg'
+        index.src = './src/Hgreen.svg'
     })
     lpSpanArr.forEach((index) => {
         index.textContent = ''
